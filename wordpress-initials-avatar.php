@@ -1,10 +1,9 @@
 <?php
-
 /*
 Plugin Name: Wordpress Initials Avatar
 Plugin URI: https://github.com/LasseRafn/wordpress-initials-avatar
 Description: Replaces the default avatars with initials
-Version: 0.5
+Version: 2018-dev
 Author: lasserafn
 Author URI: https://github.com/LasseRafn
 License: MIT
