@@ -12,15 +12,15 @@ License: MIT
 include_once 'utils.php';
 
 if ( is_admin() ) { // admin actions
-	add_action( 'admin_init', 'register_wiauia_settings' );
-	add_action( 'admin_menu', 'wiauia_settings_menu' );
+	add_action( 'admin_init', 'register_wp_ui_avatars_settings' );
+	add_action( 'admin_menu', 'wp_ui_avatars_settings_menu' );
 
-	function wiauia_settings_menu() {
-		add_submenu_page( 'options-general.php', __( 'User Initials Avatar Setitngs', 'wp-initials-avatar' ), 'Avatar settings', 'administrator', __FILE__, 'wiauia_settings_page' );
-		add_action( 'admin_init', 'register_wiauia_settings' );
+	function wp_ui_avatars_settings_menu() {
+		add_submenu_page( 'options-general.php', __( 'User Initials Avatar Setitngs', 'wp-initials-avatar' ), 'Avatar settings', 'administrator', __FILE__, 'wp_ui_avatars_settings_page' );
+		add_action( 'admin_init', 'register_wp_ui_avatars_settings' );
 	}
 
-	function register_wiauia_settings() {
+	function register_wp_ui_avatars_settings() {
 		register_setting( 'wiauia-settings', 'color' );
 		register_setting( 'wiauia-settings', 'background' );
 		register_setting( 'wiauia-settings', 'length' );
@@ -28,14 +28,14 @@ if ( is_admin() ) { // admin actions
 		register_setting( 'wiauia-settings', 'rounded' );
 	}
 
-	function wiauia_enqueue_color_picker() {
+	function wp_ui_avatars_enqueue_color_picker() {
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_script( 'my-script-handle', plugins_url( 'settings.js', __FILE__ ), [ 'wp-color-picker' ], false, true );
 	}
 
-	add_action( 'admin_enqueue_scripts', 'wiauia_enqueue_color_picker' );
+	add_action( 'admin_enqueue_scripts', 'wp_ui_avatars_enqueue_color_picker' );
 
-	function wiauia_settings_page() {
+	function wp_ui_avatars_settings_page() {
 
 		require_once __DIR__ . '/options.php';
 	}

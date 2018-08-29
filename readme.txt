@@ -2,10 +2,10 @@
 Tested up to: 4.8.2
 Requires at least: 3.5
 Requires PHP: 5.6
-Stable tag: 0.5
+Stable tag: 0.8
 License: MIT
 License URI: https://opensource.org/licenses/MIT
-Contributors: LasseRafn
+Contributors: LasseRafn, mayukojpn, abecoffman
 
 Plugin to replace default avatars with user initials generated from their name.
 
@@ -24,6 +24,12 @@ We use https://ui-avatars.com to generate avatars. You can pick length of initia
 None so far.
 
 == Changelog ==
+
+= 0.8 =
+* Spelling fixex (thanks mayukojpn)
+* Translate-ability (thanks mayukojpn)
+* Removed PHP coalesce operator (thanks abecoffman)
+* Bugfixes and more (thanks mayukojpn)
 
 = 0.7 =
 * Rounded option
